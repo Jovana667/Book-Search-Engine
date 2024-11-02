@@ -42,15 +42,18 @@ npm run develop
 
 ## Screenshot 
 <img width="472" alt="book search engine 1" src="https://github.com/user-attachments/assets/8e7fe91f-0340-479a-9769-55fe817f385e">
-![2](https://github.com/user-attachments/assets/d73aa76d-5864-464d-95c7-bde118c6c0a9)
+
+![2](https://github.com/user-attachments/assets/98a4775d-0f07-48b7-be17-66cf0a0a1872)
+
 
 ## Demo
 
-https://github.com/user-attachments/assets/ba8d9196-4549-45dd-856c-e68339f7273e
+https://github.com/user-attachments/assets/34b81ec9-b60c-4630-a867-36cdefa80926
 
 
 ## Deployed Application
-[Deployed Application](your-deployment-url)
+
+https://jovanasbooksearchengine.netlify.app/
 
 ## Credits
 
