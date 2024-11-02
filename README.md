@@ -43,7 +43,7 @@ npm run develop
 ## Screenshot 
 <img width="472" alt="book search engine 1" src="https://github.com/user-attachments/assets/8e7fe91f-0340-479a-9769-55fe817f385e">
 
-![2](https://github.com/user-attachments/assets/98a4775d-0f07-48b7-be17-66cf0a0a1872)
+<img width="472" alt="book search engine 1" src="https://github.com/user-attachments/assets/98a4775d-0f07-48b7-be17-66cf0a0a1872">
 
 
 ## Demo
