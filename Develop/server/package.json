@@ -12,8 +12,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "apollo-server-express": "^3.13.0",
+    "@apollo/server": "^4.9.5",
     "bcrypt": "^4.0.1",
+    "cors": "^2.8.5",
     "express": "^4.21.1",
     "graphql": "^16.9.0",
     "jsonwebtoken": "^8.5.1",

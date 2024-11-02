@@ -1,39 +1,38 @@
-const jwt = require('jsonwebtoken');
+const jwt = require("jsonwebtoken");
 
 // set token secret and expiration date
-const secret = 'mysecretsshhhhh';
-const expiration = '2h';
+const secret = "mysecretsshhhhh";
+const expiration = "2h";
 
 module.exports = {
-  // function for our authenticated routes
-  authMiddleware: function (req, res, next) {
-    // allows token to be sent via  req.query or headers
-    let token = req.query.token || req.headers.authorization;
+  // Updated authMiddleware for GraphQL context
+  // server/utils/auth.js
+  authMiddleware: function ({ req }) {
+    console.log("AUTH MIDDLEWARE - Headers:", req.headers);
+    let token = req.headers.authorization;
 
-    // ["Bearer", "<tokenvalue>"]
-    if (req.headers.authorization) {
-      token = token.split(' ').pop().trim();
+    if (token) {
+      token = token.split(" ").pop().trim();
+      console.log("AUTH MIDDLEWARE - Parsed token:", token);
     }
 
     if (!token) {
-      return res.status(400).json({ message: 'You have no token!' });
+      console.log("AUTH MIDDLEWARE - No token found");
+      return { user: null };
     }
 
-    // verify token and get user data out of it
     try {
-      const { data } = jwt.verify(token, secret, { maxAge: expiration });
-      req.user = data;
-    } catch {
-      console.log('Invalid token');
-      return res.status(400).json({ message: 'invalid token!' });
+      const { data } = jwt.verify(token, secret);
+      console.log("AUTH MIDDLEWARE - Verified user data:", data);
+      return { user: data };
+    } catch (err) {
+      console.log("AUTH MIDDLEWARE - Token verification failed:", err);
+      return { user: null };
     }
-
-    // send to next endpoint
-    next();
   },
+
   signToken: function ({ username, email, _id }) {
     const payload = { username, email, _id };
-
     return jwt.sign({ data: payload }, secret, { expiresIn: expiration });
   },
 };

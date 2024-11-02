@@ -18,15 +18,17 @@ const LoginForm = () => {
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
+    console.log("Attempting login with:", userFormData); // Log the input data
 
     try {
       const { data } = await login({
         variables: { ...userFormData },
       });
+      console.log("Login response:", data); // Log the response
 
       Auth.login(data.login.token);
     } catch (err) {
-      console.error(err);
+      console.error("Login error details:", err); // More detailed error logging
       setShowAlert(true);
     }
 
