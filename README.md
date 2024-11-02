@@ -40,10 +40,16 @@ npm run develop
 - View and manage saved books in your profile
 - Search and add new books to your collection
 
-## Screenshot
+## Screenshot 
 <img width="472" alt="book search engine 1" src="https://github.com/user-attachments/assets/8e7fe91f-0340-479a-9769-55fe817f385e">
+![2](https://github.com/user-attachments/assets/d73aa76d-5864-464d-95c7-bde118c6c0a9)
 
-## Live Demo
+## Demo
+
+https://github.com/user-attachments/assets/ba8d9196-4549-45dd-856c-e68339f7273e
+
+
+## Deployed Application
 [Deployed Application](your-deployment-url)
 
 ## Credits
